@@ -1,20 +1,28 @@
 const title = document.querySelector("#title");
+const CLICKED_CLASS = "clicked";
 
-const BASE_COLOR = "rgb(52, 73, 94)";
-const OTHER_COLOR = "#7f8c8d";
+/*
+function handleClick() {
+    const currentClass = title.className;
+    if (currentClass !== CLICKED_CLASS) {
+        title.className = CLICKED_CLASS;
+    } else {
+        title.className = "";
+    }
+}
+이 친구는 btn 클래스를 지워버림 이전 클래스를 존중하지 않아 */
 
 function handleClick() {
-   const currentColor = title.style.color;
-   if ( currentColor === BASE_COLOR) {
-       title.style.color = OTHER_COLOR;
-   } else {
-       title.style.color = BASE_COLOR;
-   }
+    //const currentClass = title.className; currentClass에 btn cliked가 들어가서 동작하지 않음
+    const hasClass = title.classList.contains(CLICKED_CLASS);
+    if (!hasClass) {
+        title.classList.add(CLICKED_CLASS);
+    } else {
+        title.classList.remove(CLICKED_CLASS);
+    }
 }
 
-
 function init() {
-    title.style.color = BASE_COLOR;
     title.addEventListener("click", handleClick);
 }
 
