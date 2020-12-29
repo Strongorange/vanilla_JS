@@ -14,12 +14,7 @@ function handleClick() {
 
 function handleClick() {
     //const currentClass = title.className; currentClass에 btn cliked가 들어가서 동작하지 않음
-    const hasClass = title.classList.contains(CLICKED_CLASS);
-    if (!hasClass) {
-        title.classList.add(CLICKED_CLASS);
-    } else {
-        title.classList.remove(CLICKED_CLASS);
-    }
+    title.classList.toggle(CLICKED_CLASS);
 }
 
 function init() {
