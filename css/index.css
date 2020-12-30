@@ -1,16 +1,8 @@
-body {
-  background-color: tomato;
+.form,
+.greetings {
+  display: none;
 }
 
-h1 {
-  color: #34495e;
-}
-
-.clicked {
-  color: #7f8c8d;
-}
-
-/* 버튼 클래스를 추가한 후 클릭해보면 처음에만 btn이 살고 클릭하면 클래스가 죽는다 */
-.btn {
-  cursor: pointer;
+.showing {
+  display: block;
 }
