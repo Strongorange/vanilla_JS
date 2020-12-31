@@ -3,8 +3,26 @@ body {
   color: white;
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadetext {
+  from {
+    color: white;
+  }
+  to {
+    color: transparent;
+  }
+}
+
 .empty-box {
-  margin-bottom: 220px;
+  margin-bottom: 150px;
 }
 
 .js-clock {
@@ -52,6 +70,25 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -50px;
+  margin-bottom: -40px;
+}
+
+.js-toDoForm input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+}
+
+.js-toDoForm input::placeholder {
+  color: white;
+}
+
+.js-toDoForm input:focus::placeholder {
+  color: transparent;
 }
 
 .js-toDoList {
@@ -59,6 +96,8 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 45px;
+  font-weight: 600;
 }
 
 .js-weather-box {
@@ -66,6 +105,12 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.greetings {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
 }
 
 .form,
@@ -77,15 +122,6 @@ textarea {
   display: block;
 }
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .bgImage {
   position: absolute;
   top: 0;
@@ -94,4 +130,8 @@ textarea {
   height: 100%;
   z-index: -1;
   animation: fadein 2s linear;
+}
+
+.js-weather {
+  font-size: 25px;
 }
