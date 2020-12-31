@@ -4,7 +4,18 @@ const toDoForm = document.querySelector(".js-toDoForm"),
 
 const TODOS_LS = "toDos";
 
-const toDos = [];
+let toDos = [];
+
+function deleteToDo(event){
+    const btn = event.target;
+    const btn_li = btn.parentNode;
+    toDoList.removeChild(btn_li);
+    const cleanToDos = toDos.filter(function(toDo) {
+        return toDo.id !== parseInt(btn_li.id);
+    });
+    toDos = cleanToDos;
+    saveToDos();
+}
 
 function saveToDos() {
     localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
@@ -16,6 +27,7 @@ function paintToDo(text) {
     const span = document.createElement("span");
     const newId = toDos.length + 1;
     delBtn.innerText = "❌"; //강의에서는 innerHTML
+    delBtn.addEventListener("click", deleteToDo); //버튼 만들때 이벤트 리스너 만들어도 항상 사용가능한듯!
     span.innerText = text;
     li.appendChild(span);
     li.appendChild(delBtn);
