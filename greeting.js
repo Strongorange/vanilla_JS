@@ -1,7 +1,6 @@
-const form = document.querySelector(".js-form");
-const input = form.querySelector("input");
-const greeting = document.querySelector(".js-greetings");
-
+const form = document.querySelector(".js-form"),
+      input = form.querySelector("input"),
+      greeting = document.querySelector(".js-greetings");
 const USER_LS = "currentUser";
 const SHOWING_CN = "showing";
 

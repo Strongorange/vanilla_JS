@@ -1,3 +1,7 @@
+body {
+  background-color: tomato;
+}
+
 .form,
 .greetings {
   display: none;
