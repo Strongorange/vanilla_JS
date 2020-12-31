@@ -53,6 +53,8 @@ body {
   font-size: 60px;
   outline: none;
   width: 500px;
+  text-align: center;
+  color: white;
 }
 
 .js-form input:focus::placeholder {
@@ -60,13 +62,6 @@ body {
 }
 
 .js-form input::placeholder {
-  color: white;
-  text-align: center;
-}
-
-.js-form input,
-select,
-textarea {
   color: white;
   text-align: center;
 }
